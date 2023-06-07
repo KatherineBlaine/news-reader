@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <h1>News Reader</h1>
-      <Articles articles={articles}/>
+      {articles && <Articles articles={articles}/>}
     </>
   );
 }
