@@ -1,4 +1,4 @@
-export const articles = {
+export const sampleArticles = {
   "status": "ok",
   "totalResults": 8598,
   "articles": [
