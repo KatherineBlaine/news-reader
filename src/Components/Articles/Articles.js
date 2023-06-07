@@ -8,7 +8,7 @@ const Articles = ({ articles }) => {
   })
 
   return (
-    <div>
+    <div className='card-container'>
       <h1>Articles!</h1>
       <div>{articleCards}</div>
     </div>
