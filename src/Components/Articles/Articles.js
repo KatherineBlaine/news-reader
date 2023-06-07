@@ -1,6 +1,7 @@
 import './Articles.css'
 
-const Articles = () => {
+const Articles = ({ articles }) => {
+
   return (
     <h1>Articles!</h1>
   )

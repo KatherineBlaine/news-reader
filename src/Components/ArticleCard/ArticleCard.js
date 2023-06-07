@@ -1,8 +1,12 @@
 import './ArticleCard.css'
 
-const ArticleCard = () => {
+const ArticleCard = ({ article }) => {
   return (
-    <h1>Article Card</h1>
+    <div className='card'>
+      <img src={article.urlToImage}></img>
+      <h1>{article.title}</h1>
+      <p>{article.description}</p>
+    </div>
   )
 }
 
