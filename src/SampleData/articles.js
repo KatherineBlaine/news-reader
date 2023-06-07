@@ -1,4 +1,4 @@
-const articles = {
+export const articles = {
   "status": "ok",
   "totalResults": 8598,
   "articles": [
