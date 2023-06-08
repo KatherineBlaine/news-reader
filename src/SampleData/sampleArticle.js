@@ -1,4 +1,4 @@
-export const article = {
+export const sampleArticle = {
   "source": {
     "id": null,
     "name": "Biztoc.com"

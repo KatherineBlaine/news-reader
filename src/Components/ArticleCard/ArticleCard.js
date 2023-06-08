@@ -1,8 +1,17 @@
+import { Link } from 'react-router-dom'
 import './ArticleCard.css'
 
-const ArticleCard = () => {
+const ArticleCard = ({ article }) => {
   return (
-    <h1>Article Card</h1>
+    <Link to={`/${article.title}`}>
+      <div className='card'>
+        <img src={article.urlToImage}></img>
+        <div className='card-right-content'>
+          <h1>{article.title}</h1>
+          <p>{article.description}</p>
+        </div>
+      </div>
+    </Link>
   )
 }
 
