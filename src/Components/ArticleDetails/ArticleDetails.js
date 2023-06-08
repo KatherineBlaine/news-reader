@@ -1,4 +1,3 @@
-import { sampleArticle } from '../../SampleData/sampleArticle';
 import { useState, useEffect } from 'react';
 import './ArticleDetails.css'
 import { useParams } from 'react-router';
@@ -7,10 +6,10 @@ import { Link } from 'react-router-dom';
 const ArticleDetails = ({ articles }) => {
   const [article, setArticle] = useState({})
 
-  const params = useParams()
+  const { title } = useParams()
 
   useEffect(() => {
-    const selectedArticle = articles.articles.find(article => article.title === params.title)
+    const selectedArticle = articles.find(article => article.title === title)
     setArticle(selectedArticle)
   }, [])
 

@@ -6,7 +6,7 @@ import './SearchResults.css'
 const SearchResults = ({ articles }) => {
   const params = useParams()
 
-  const articleResults = articles.articles.filter(article => article.title.includes(params.query))
+  const articleResults = articles.filter(article => article.title.toUpperCase().includes(params.query.toUpperCase()))
 
   const articleCards = articleResults.map(article => {
     return <ArticleCard article={article} key={article.title}/>
