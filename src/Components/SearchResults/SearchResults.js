@@ -1,4 +1,5 @@
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import ArticleCard from '../ArticleCard/ArticleCard';
 import './SearchResults.css'
 
@@ -12,7 +13,10 @@ const SearchResults = ({ articles }) => {
   })
 
   return (
-    <div>{articleCards}</div>
+    <>
+      <Link to='/'>Home</Link>
+      <div>{articleCards}</div>
+    </>
   )
 }
 
