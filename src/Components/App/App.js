@@ -1,4 +1,5 @@
 import Articles from '../Articles/Articles';
+import { fetchArticles } from '../../utilities/apicalls';
 import Header from '../Header/Header';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import SearchResults from '../SearchResults/SearchResults';
@@ -9,7 +10,20 @@ import './App.css';
 
 const App = () => {
   const [articles, setArticles] = useState(sampleArticles)
-  
+
+  // const getArticles = async () => {
+  //   try {
+  //     const data = fetchArticles();
+  //     setArticles(data)
+  //   } catch(error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getArticles()
+  // }, [])
+
   return (
     <>
     <Header />
