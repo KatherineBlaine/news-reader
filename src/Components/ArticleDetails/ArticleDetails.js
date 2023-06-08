@@ -2,6 +2,7 @@ import { sampleArticle } from '../../SampleData/sampleArticle';
 import { useState, useEffect } from 'react';
 import './ArticleDetails.css'
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const ArticleDetails = ({ articles }) => {
   const [article, setArticle] = useState({})
@@ -15,6 +16,7 @@ const ArticleDetails = ({ articles }) => {
 
   return (
     <div className='details'>
+      <Link to='/'><button>Home</button></Link>
       <h1>Article Details</h1>
       <h2>{article.title}</h2>
       <img src={article.urlToImage}></img>

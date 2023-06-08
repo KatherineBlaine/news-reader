@@ -7,7 +7,7 @@ import './Articles.css'
 const Articles = ({ articles }) => {
   
   const articleCards = articles.articles?.map(article => {
-      return <ArticleCard article={article} />
+      return <ArticleCard article={article} key={article.title}/>
     })
 
   return (

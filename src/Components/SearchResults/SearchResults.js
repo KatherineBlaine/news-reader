@@ -9,12 +9,12 @@ const SearchResults = ({ articles }) => {
   const articleResults = articles.articles.filter(article => article.title.includes(params.query))
 
   const articleCards = articleResults.map(article => {
-    return <ArticleCard article={article} />
+    return <ArticleCard article={article} key={article.title}/>
   })
 
   return (
     <>
-      <Link to='/'>Home</Link>
+      <Link to='/'><button>Home</button></Link>
       <h2>{`Results for '${params.query}'`}</h2>
       <div>{articleCards}</div>
     </>

@@ -10,10 +10,10 @@ const Form = () => {
   }
 
   return (
-    <>
+    <form>
       <input value={query} onChange={(e) => handleChange(e)}/>
-      <Link to={`/search/${query}`}>Search</Link>
-    </>
+      <Link to={`/search/${query}`}><button>Search</button></Link>
+    </form>
   )
 }
 

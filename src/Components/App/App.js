@@ -1,4 +1,5 @@
 import Articles from '../Articles/Articles';
+import Header from '../Header/Header';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import SearchResults from '../SearchResults/SearchResults';
 import { Routes, Route } from 'react-router-dom';
@@ -11,7 +12,7 @@ const App = () => {
   
   return (
     <>
-    <h1>News Reader</h1>
+    <Header />
       <Routes>
         <Route path='/' element={articles && <Articles articles={articles} />} />
         <Route path='/search/:query' element={articles && <SearchResults articles={articles} />} />
