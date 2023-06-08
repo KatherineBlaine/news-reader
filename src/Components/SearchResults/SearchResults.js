@@ -14,9 +14,11 @@ const SearchResults = ({ articles }) => {
 
   return (
     <>
-      <Link to='/'><button>Home</button></Link>
-      <h2>{`Results for '${params.query}'`}</h2>
-      <div>{articleCards}</div>
+      <div className='results-header'>
+        <Link to='/'><button>Home</button></Link>
+        {articleCards.length ? <h2>{`Results for '${params.query}'`}</h2> : <h2>{`Sorry, no results for '${params.query}.' Please try searching for something else!`}</h2>}
+      </div>
+      <div>{articleCards}</div> 
     </>
   )
 }
