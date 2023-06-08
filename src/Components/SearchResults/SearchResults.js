@@ -15,6 +15,7 @@ const SearchResults = ({ articles }) => {
   return (
     <>
       <Link to='/'>Home</Link>
+      <h2>{`Results for '${params.query}'`}</h2>
       <div>{articleCards}</div>
     </>
   )
