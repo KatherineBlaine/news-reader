@@ -1,12 +1,16 @@
 import { sampleArticle } from '../../SampleData/sampleArticle';
 import { useState, useEffect } from 'react';
 import './ArticleDetails.css'
+import { useParams } from 'react-router';
 
-const ArticleDetails = () => {
+const ArticleDetails = ({ articles }) => {
   const [article, setArticle] = useState({})
 
+  const params = useParams()
+
   useEffect(() => {
-    setArticle(sampleArticle)
+    const selectedArticle = articles.articles.find(article => article.title === params.title)
+    setArticle(selectedArticle)
   }, [])
 
   return (

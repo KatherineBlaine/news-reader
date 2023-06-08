@@ -15,7 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={articles && <Articles articles={articles} />} />
         <Route path='/search/:query' element={articles && <SearchResults articles={articles} />} />
-        <Route path='/:title' element={<ArticleDetails />} />
+        <Route path='/:title' element={<ArticleDetails articles={articles}/>} />
       </Routes>
     </>
   );
