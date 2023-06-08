@@ -5,24 +5,23 @@ import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import SearchResults from '../SearchResults/SearchResults';
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { sampleArticles } from '../../SampleData/sampleArticles';
 import './App.css';
 
 const App = () => {
-  const [articles, setArticles] = useState(sampleArticles)
+  const [articles, setArticles] = useState({})
 
-  // const getArticles = async () => {
-  //   try {
-  //     const data = fetchArticles();
-  //     setArticles(data)
-  //   } catch(error) {
-  //     console.log(error)
-  //   }
-  // }
+  const getArticles = async () => {
+    try {
+      const data = await fetchArticles('https://newsapi.org/v2/top-headlines?country=us&apiKey=7824ffd1a40e43bea1c847dfaab89839');
+      setArticles(data)
+    } catch(error) {
+      console.log(error)
+    }
+  }
 
-  // useEffect(() => {
-  //   getArticles()
-  // }, [])
+  useEffect(() => {
+    getArticles()
+  }, [])
 
   return (
     <>
