@@ -1,4 +1,5 @@
 import Articles from '../Articles/Articles';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { sampleArticles } from '../../SampleData/sampleArticles';
 import './App.css';
@@ -12,8 +13,9 @@ const App = () => {
   
   return (
     <>
-      <h1>News Reader</h1>
-      {articles && <Articles articles={articles}/>}
+      <Routes>
+        <Route path='/' element={articles && <Articles articles={articles}/>} />
+      </Routes>
     </>
   );
 }
