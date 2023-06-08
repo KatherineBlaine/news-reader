@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom'
 import './ArticleCard.css'
 
 const ArticleCard = ({ article }) => {
-  console.log(article)
   return (
-    <Link to={`/${article.title}`}>
+    <Link to={`/details/${article.title}`}>
       <div className='card'>
         <img src={article.urlToImage}></img>
         <div className='card-right-content'>
