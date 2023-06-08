@@ -4,6 +4,7 @@ import './ArticleCard.css'
 const ArticleCard = ({ article }) => {
   console.log(article)
   return (
+    <Link to={`/${article.title}`}>
       <div className='card'>
         <img src={article.urlToImage}></img>
         <div className='card-right-content'>
@@ -11,6 +12,7 @@ const ArticleCard = ({ article }) => {
           <p>{article.description}</p>
         </div>
       </div>
+    </Link>
   )
 }
 

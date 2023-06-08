@@ -1,4 +1,5 @@
 import Articles from '../Articles/Articles';
+import ArticleDetails from '../ArticleDetails/ArticleDetails';
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { sampleArticles } from '../../SampleData/sampleArticles';
@@ -15,6 +16,7 @@ const App = () => {
     <>
       <Routes>
         <Route path='/' element={articles && <Articles articles={articles}/>} />
+        <Route path='/:title' element={<ArticleDetails />} />
       </Routes>
     </>
   );
