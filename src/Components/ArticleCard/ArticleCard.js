@@ -3,7 +3,7 @@ import './ArticleCard.css'
 
 const ArticleCard = ({ article }) => {
   return (
-    <Link to={`/details/${article.title}`}>
+    <Link to={`/${article.title}`}>
       <div className='card'>
         <img src={article.urlToImage}></img>
         <div className='card-right-content'>
