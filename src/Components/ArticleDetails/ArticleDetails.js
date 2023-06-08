@@ -17,11 +17,10 @@ const ArticleDetails = ({ articles }) => {
   return (
     <div className='details'>
       <Link to='/'><button>Home</button></Link>
-      <h1>Article Details</h1>
+      <img className='details-img' src={article.urlToImage}></img>
       <h2>{article.title}</h2>
-      <img src={article.urlToImage}></img>
-      <a href={article.url}>{article.url}</a>
-      <p>{article.content}</p>
+      <p className='art-content'>{article.content}</p>
+      <a className='site-link' href={article.url}>Read more</a>
     </div>
   )
 }
